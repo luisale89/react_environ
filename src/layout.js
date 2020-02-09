@@ -1,6 +1,7 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Router, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
+import history from './views/history';
 
 import { Home1 } from "./views/home1";
 import injectContext from "../src/store/appContext";
@@ -16,7 +17,7 @@ export const Layout = () => {
 
 	return (
 		<div className="d-flex flex-column h-100">
-			<BrowserRouter>
+			<Router history={history}>
 				<ScrollToTop>
 					<Navbar />
 					<Switch>
@@ -24,7 +25,7 @@ export const Layout = () => {
 						<Route render={() => <h1>Not found!</h1>} />
 					</Switch>
 				</ScrollToTop>
-			</BrowserRouter>
+			</Router>
 		</div>
 	);
 };
