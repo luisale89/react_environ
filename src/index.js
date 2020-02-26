@@ -3,10 +3,6 @@ import ReactDOM from 'react-dom';
 import Layout from './layout';
 import * as serviceWorker from './serviceWorker';
 
-//include bootstrap npm library into the bundle
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap"; //import bootstrap's js
-
 //include your index.scss file into the bundle
 import "./styles/index.scss";
 
